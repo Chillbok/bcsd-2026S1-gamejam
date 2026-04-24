@@ -538,24 +538,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1357031236 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1902683679361147197, guid: 26114b2fcba6240559e369e17d007532, type: 3}
-  m_PrefabInstance: {fileID: 4597043237022261751}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1357031245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357031236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa2ffe0263e0450c9b8fcc623cc61e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
-  MoveSpeed: 5
 --- !u!1001 &4597043237022261751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,10 +546,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 203496916213056559, guid: 26114b2fcba6240559e369e17d007532, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1902683679361147197, guid: 26114b2fcba6240559e369e17d007532, type: 3}
       propertyPath: m_Name
       value: Player
@@ -612,16 +590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7390854963675833329, guid: 26114b2fcba6240559e369e17d007532, type: 3}
-    - {fileID: 5844955956720543561, guid: 26114b2fcba6240559e369e17d007532, type: 3}
-    - {fileID: 3169488848646704442, guid: 26114b2fcba6240559e369e17d007532, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1902683679361147197, guid: 26114b2fcba6240559e369e17d007532, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1357031245}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26114b2fcba6240559e369e17d007532, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

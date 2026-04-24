@@ -14,9 +14,7 @@ GameObject:
   - component: {fileID: 203496916213056559}
   - component: {fileID: 4958455599535758247}
   - component: {fileID: 7747145648090645596}
-  - component: {fileID: 5844955956720543561}
-  - component: {fileID: 3169488848646704442}
-  - component: {fileID: 7390854963675833329}
+  - component: {fileID: 4932114069169850371}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,7 +151,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4958455599535758247
 BoxCollider2D:
@@ -223,7 +221,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5844955956720543561
+--- !u!114 &4932114069169850371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,31 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902683679361147197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff999e9efc87c4fd3ae57e2a00b94ea3, type: 3}
+  m_Script: {fileID: 11500000, guid: dfa2ffe0263e0450c9b8fcc623cc61e0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMoveController
-  moveSpeed: 5
---- !u!114 &3169488848646704442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902683679361147197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5763386f6bde54020ad8cdcbb79f1ebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
---- !u!114 &7390854963675833329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902683679361147197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3e76c3f15934bf1a20660ba5dba175, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerFSM
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  MoveSpeed: 5
