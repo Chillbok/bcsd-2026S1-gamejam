@@ -17,5 +17,6 @@ public class EncounterManager : MonoBehaviour
         }
         
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }
