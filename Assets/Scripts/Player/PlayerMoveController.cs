@@ -6,17 +6,16 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMoveController : MonoBehaviour
 {
-    [Header("Movement Settings")]
+    [Header("이동 관련 변수")]
     [SerializeField] private float moveSpeed = 5f;
-
-    private Rigidbody2D _rb;
     private PlayerInput _playerInput;
-    private InputAction _moveAction;
     private Vector2 _moveInput;
-    private Vector2 _jumpInput;
-    private bool _isGrounded;
-    
+
+    // 컴포넌트 변수들
+    private Rigidbody2D _rb;
+    private InputAction _moveAction;
     private SpriteRenderer _spriteRenderer;
+
 
     private void Awake()
     {
