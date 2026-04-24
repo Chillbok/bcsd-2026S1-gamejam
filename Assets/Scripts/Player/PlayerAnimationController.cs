@@ -54,15 +54,7 @@ public class PlayerAnimationController : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         Vector2 input = context.ReadValue<Vector2>();
-        if (input.x == 0)
-        {
-            _fsm.isMoving = false;
-        }
-        else
-        {
-            _fsm.isMoving = true;
-            if (input.x < 0) _spriteRenderer.flipX = true;
-            else _spriteRenderer.flipX = false;
-        }
+        if (input.x < 0) _spriteRenderer.flipX = true;
+        else if (input.x > 0) _spriteRenderer.flipX = false;
     }
 }
