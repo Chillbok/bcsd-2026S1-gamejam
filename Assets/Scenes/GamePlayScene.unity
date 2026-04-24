@@ -623,6 +623,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEngage
   attackHitbox: {fileID: 566300398}
+--- !u!114 &1357031247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357031236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0daa19fc0a345269d0a5b5ef4f86e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatController
+  _maxHp: 100
+  _currentHp: 0
 --- !u!1001 &2414675047277963149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -779,6 +793,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1902683679361147197, guid: 26114b2fcba6240559e369e17d007532, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1357031246}
+    - targetCorrespondingSourceObject: {fileID: 1902683679361147197, guid: 26114b2fcba6240559e369e17d007532, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357031247}
   m_SourcePrefab: {fileID: 100100000, guid: 26114b2fcba6240559e369e17d007532, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
