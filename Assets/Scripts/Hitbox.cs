@@ -8,10 +8,6 @@ public class Hitbox : MonoBehaviour
     [SerializeField]
     private string _masterTag = "Player";
 
-    [Header("히트박스 인식 대상 태그")]
-    [SerializeField]
-    private string _targetTag = "Enemy";
-
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
         string combatSceneName = "CombatScene";
