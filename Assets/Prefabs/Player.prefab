@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7747145648090645596}
   - component: {fileID: 5844955956720543561}
   - component: {fileID: 3169488848646704442}
+  - component: {fileID: 7390854963675833329}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -210,7 +211,7 @@ Animator:
   m_GameObject: {fileID: 1902683679361147197}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43b9153c7bc2b41cfa745735e862a1c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -247,3 +248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5763386f6bde54020ad8cdcbb79f1ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
+--- !u!114 &7390854963675833329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902683679361147197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3e76c3f15934bf1a20660ba5dba175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFSM
