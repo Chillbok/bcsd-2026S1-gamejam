@@ -1,3 +1,4 @@
+// 인카운터 전 필드에서 데이터 관리하는 메서드
 using UnityEngine;
 
 public class EncounterManager : MonoBehaviour

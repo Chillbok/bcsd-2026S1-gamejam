@@ -11,6 +11,16 @@ public class PlayerStatController : MonoBehaviour
 
 	private void Start()
 	{
-		CurrentHp = MaxHp;
+        if (EncounterManager.Instance != null && EncounterManager.Instance.PlayerMaxHp > 0)
+        {
+            // 전투에서 돌아왔거나 이미 데이터가 저장되어 있는 경우
+            MaxHp = EncounterManager.Instance.PlayerMaxHp;
+            CurrentHp = EncounterManager.Instance.PlayerCurrentHp;
+        }
+        else
+        {
+            // 게임 최초 시작 시
+            CurrentHp = MaxHp;
+        }
 	}
 }
