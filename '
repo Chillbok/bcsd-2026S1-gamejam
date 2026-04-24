@@ -14,20 +14,19 @@ public class Hitbox : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        string combatSceneName = "CombatScene";
         // 히트박스가 플레이어 소유일 때
         if (_masterTag == "Player" && collision.CompareTag("Enemy"))
         {
             EncounterManager.Instance.EnemyStatController = collision.GetComponent<EnemyStatController>();
             EncounterManager.Instance.PlayerStatController = GetComponentInParent<PlayerStatController>();
-            SceneManager.LoadScene(combatSceneName);
+            SceneManager.LoadScene("CombatScene");
         }
         // 히트박스가 적 소유일 때
         else if (_masterTag == "Enemy" && collision.CompareTag("Player"))
         {
             EncounterManager.Instance.EnemyStatController = GetComponentInParent<EnemyStatController>();
             EncounterManager.Instance.PlayerStatController = collision.GetComponent<PlayerStatController>();
-            SceneManager.LoadScene(combatSceneName);
+            SceneManager.LoadScene("CombatScene");
         }
 	}
 }
