@@ -5,8 +5,10 @@ public class EncounterManager : MonoBehaviour
     public static EncounterManager Instance { get; private set; }
     
     // 보낼 변수
-    public PlayerStatController PlayerStatController {get; set;}
-    public EnemyStatController EnemyStatController {get; set;}
+    public float PlayerMaxHp {get; set;}
+    public float PlayerCurrentHp {get; set;}
+    public float EnemyMaxHp {get; set;}
+    public float EnemyCurrentHp {get; set;}
 
     private void Awake()
     {

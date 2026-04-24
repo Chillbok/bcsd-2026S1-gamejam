@@ -18,16 +18,31 @@ public class Hitbox : MonoBehaviour
         // 히트박스가 플레이어 소유일 때
         if (_masterTag == "Player" && collision.CompareTag("Enemy"))
         {
-            EncounterManager.Instance.EnemyStatController = collision.GetComponent<EnemyStatController>();
-            EncounterManager.Instance.PlayerStatController = GetComponentInParent<PlayerStatController>();
+            EnemyStatController _enemyStatController = collision.GetComponent<EnemyStatController>();
+            PlayerStatController _playerStatController = GetComponentInParent<PlayerStatController>();
+            
+            GivePlayerStats(_playerStatController, _enemyStatController);
+
             SceneManager.LoadScene(combatSceneName);
         }
         // 히트박스가 적 소유일 때
         else if (_masterTag == "Enemy" && collision.CompareTag("Player"))
         {
-            EncounterManager.Instance.EnemyStatController = GetComponentInParent<EnemyStatController>();
-            EncounterManager.Instance.PlayerStatController = collision.GetComponent<PlayerStatController>();
+            EnemyStatController _enemyStatController = GetComponentInParent<EnemyStatController>();
+            PlayerStatController _playerStatController = collision.GetComponent<PlayerStatController>();
+            
+            GivePlayerStats(_playerStatController, _enemyStatController);
+
             SceneManager.LoadScene(combatSceneName);
         }
 	}
+    
+    private void GivePlayerStats(PlayerStatController playerStatController, EnemyStatController enemyStatController)
+    {
+        EncounterManager.Instance.PlayerMaxHp = playerStatController.MaxHp;
+        EncounterManager.Instance.PlayerCurrentHp = playerStatController.CurrentHp;
+        
+        EncounterManager.Instance.EnemyMaxHp = enemyStatController.MaxHp;
+        EncounterManager.Instance.EnemyCurrentHp = enemyStatController.CurrentHp;
+    }
 }
