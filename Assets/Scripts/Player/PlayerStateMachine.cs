@@ -56,6 +56,12 @@ public class PlayerStateMachine : MonoBehaviour
     }
 
     // Animation Event Callbacks
+    public void OnAttackStart()
+    {
+        // 애니메이션 시작 시 호출됨 (디버그용 또는 공격 판정 시작용)
+        // Debug.Log("공격 시작!");
+    }
+
     public void OnAttackEnd()
     {
         if (_currentState == AttackState)
